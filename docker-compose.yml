@@ -1,0 +1,32 @@
+version: '3'
+services:
+  directus:
+    image: directus/directus:latest
+    ports:
+      - 8055:8055
+    volumes:
+      - ./uploads:/directus/uploads
+    environment:
+      KEY: '${KEY}'
+      SECRET: '${SECRET}'
+      ADMIN_EMAIL: '${ADMIN_EMAIL}'
+      ADMIN_PASSWORD: '${ADMIN_PASSWORD}'
+
+      # Configuração do PostgreSQL
+      DB_CLIENT: 'pg'
+      DB_HOST: '${DB_HOST}'
+      DB_PORT: '${DB_PORT}'
+      DB_DATABASE: '${DB_DATABASE}'
+      DB_USER: '${DB_USER}'
+      DB_PASSWORD: '${DB_PASSWORD}'
+
+      # Configuração do S3
+#      STORAGE_LOCATIONS: 'aws'
+#      STORAGE_AWS_DRIVER: 's3'
+#      STORAGE_AWS_KEY: '${AWS_ACCESS_KEY_ID}'
+#      STORAGE_AWS_SECRET: '${AWS_SECRET_ACCESS_KEY}'
+#      STORAGE_AWS_BUCKET: '${AWS_BUCKET_NAME}'
+#      STORAGE_AWS_REGION: '${AWS_REGION}'
+
+      CORS_ENABLED: 'true'
+      PUBLIC_URL: '${PUBLIC_URL}'

@@ -1,0 +1,4 @@
+{
+  "schema": "postgres",
+  "plugins": ["postgresql"]
+}
