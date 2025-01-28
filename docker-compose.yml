@@ -15,17 +15,9 @@ services:
       DB_DATABASE: '${DB_DATABASE}'
       DB_USER: '${DB_USER}'
       DB_PASSWORD: '${DB_PASSWORD}'
-      DB_SCHEMA: 'directus'
 
-      # Configurações adicionais
+      # Configurações essenciais
       HOST: '0.0.0.0'
       PORT: '8055'
-      SERVE_APP: 'true'
-
-      # Configurações de segurança
       PUBLIC_URL: '${PUBLIC_URL}'
       CORS_ENABLED: 'true'
-      CORS_ORIGIN: 'true'
-
-      # Logs
-      LOG_LEVEL: 'debug'
